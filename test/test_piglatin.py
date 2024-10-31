@@ -26,3 +26,4 @@ class TestPigLatin(unittest.TestCase):
         #f = [a, e, i, o,u]
         piglatin.get_phrase("a", "yay" )
         self.assertEqual("yay", piglatin.get_phrase("a"))
+    dfe
