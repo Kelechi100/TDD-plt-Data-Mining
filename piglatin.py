@@ -1,10 +1,10 @@
+
 class PigLatin:
+    def __init__(self):
+        self.phrase = ""
 
-    def __init__(self, phrase: str):
-        pass
+    def get_phrase(self, phrase=None, expected=None):
+        if phrase is not None and expected is not None:
+            self.phrase = phrase
+        return self.phrase
 
-    def get_phrase(self) -> str:
-        pass
-
-    def translate(self) -> str:
-        pass
