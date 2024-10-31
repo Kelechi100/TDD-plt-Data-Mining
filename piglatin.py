@@ -12,3 +12,6 @@ class PigLatin:
             self.phrase = expected
         return self.phrase
 
+    def translate(self):
+        return self.phrase
+

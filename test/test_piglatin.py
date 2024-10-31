@@ -19,15 +19,14 @@ class TestPigLatin(unittest.TestCase):
 
     def test_translate_wordsStarting_with_y(self):
         piglatin = PigLatin()
-        piglatin.get_phrase("y", "nay")
-        self.assertEqual("nay", piglatin.get_phrase("y"))
+        piglatin.get_phrase("any", "anynay")
+        self.assertEqual("anynay", piglatin.translate())
     def test_translate_wordsStarting_withVowel(self):
         piglatin = PigLatin()
-        #f = [a, e, i, o,u]
-        piglatin.get_phrase("a","yay" )
-        self.assertEqual("yay", piglatin.get_phrase("a"))
+        piglatin.get_phrase("apple", "appleyay" )
+        self.assertEqual("appleyay", piglatin.translate())
     def test_translate_wordsStarting_with_consonants(self):
         piglatin = PigLatin()
-        #f = [a, e, i, o,u]
-        piglatin.get_phrase("c", "ay" )
-        self.assertEqual("ay", piglatin.get_phrase("c"))
+        piglatin.get_phrase("ask", "askay")
+        self.assertEqual("askay",piglatin.translate(),)
+
