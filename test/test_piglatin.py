@@ -10,3 +10,10 @@ class TestPigLatin(unittest.TestCase):
         error = PigLatinError()
         piglatin.get_phrase("hello world", "hello world")
         self.assertEqual("hello world", piglatin.get_phrase())
+
+    def test_empty_string(self):
+        piglatin = PigLatin()
+        with self.assertRaises(PigLatinError) as context:
+            piglatin.get_phrase("", "nil")
+        self.assertEqual(str(context.exception), "nil")
+
