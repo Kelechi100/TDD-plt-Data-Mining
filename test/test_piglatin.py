@@ -17,3 +17,7 @@ class TestPigLatin(unittest.TestCase):
             piglatin.get_phrase("", "nil")
         self.assertEqual(str(context.exception), "nil")
 
+    def test_translate_wordsStarting_withVowel(self):
+        piglatin = PigLatin()
+        piglatin.get_phrase("y", "yay")
+        self.assertEqual("yay", piglatin.get_phrase("y"))
